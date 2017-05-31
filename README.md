@@ -29,7 +29,7 @@ python app.py
 ## Finite State Machine
 ![fsm](./show-fsm.png)
 ## Usage
-This chatbot has the ability of natural language processing . Therefore ,  the input text does not in the transition of finite state machine , it will respond you with 'perfunctory' words by package 'nltk'.
+This chatbot has the ability of natural language processing . Therefore ,  if the input text does not in the transition of finite state machine , it will respond you with 'perfunctory' words by package 'nltk'.
 
 On the other hand, if the input text exists in the transition of finite state machine , it will act as follows.
 
