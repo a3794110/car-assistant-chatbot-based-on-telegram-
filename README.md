@@ -29,14 +29,32 @@ python app.py
 ## Finite State Machine
 ![fsm](./show-fsm.png)
 ## Usage
-The initial state is set to `user`.
-a month ago @Lee-W Fix README typo 	
-Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
-a month ago @Lee-W Update README for basic FSM design 	
+This chatbot has the ability of natural language processing . Therefore,if the input text does not in the transition of finite state machine,it will respond you with 'perfunctory' words by package 'nltk'.
+
+On the other hand, if the input text exist in the transition of finite state machine,it will act as follows.
+The initial state is set to `user`. 
 * user
-	* Input: "go to state1"
-		* Reply: "I'm entering state1"
-	* Input: "go to state2"
-		* Reply: "I'm entering state2"
+	* Input: "reset the car"
+		* reset complete"
+	* Input: "functional analysis"
+		* Which parts?"
+			* state3
+				* Input: "all of it"
+					* car is functional"
+	* Input: "motion control"
+		* what to do next?"
+			* state2
+				* Input "move forward" or "turn left" or "turn right" or "move backward"
+					* then?"
+						* state4
+							* Input:"again"
+								* what to do next?"
+									* back to state2
+							* Input:"stop"
+								* back to home"
+									* back to user
+				* Input "stop"
+					* back to home"
+						* back to user
 ## Author
 [a3794110](https://github.com/a3794110)
