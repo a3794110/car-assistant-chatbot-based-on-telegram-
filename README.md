@@ -44,13 +44,13 @@ The initial state is set to `user`.
 	* Input: "motion control"
 		* what to do next?"
 			* state2
-				* Input "move forward" or "turn left" or "turn right" or "move backward"
+				* Input: "move forward" or "turn left" or "turn right" or "move backward"
 					* then?"
 						* state4
-							* Input:"again"
+							* Input: "again"
 								* what to do next?"
 									* back to state2
-							* Input:"stop"
+							* Input: "stop"
 								* back to home"
 									* back to user
 				* Input "stop"
