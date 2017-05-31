@@ -33,19 +33,19 @@ This chatbot has the ability of natural language processing . Therefore,if the i
 
 On the other hand, if the input text exist in the transition of finite state machine,it will act as follows.
 The initial state is set to `user`. 
-* user
+* Start in user
 	* Input: "reset the car"
 	* Return: "reset complete"
 	
 	* Input: "functional analysis"
 	* Return: "Which parts?"
-		* state3
+		*  Start in state3
 			* Input: "all of it"
 			* Return: "car is functional"
 			
 	* Input: "motion control"
 	* Return: "what to do next?"
-		* state2
+		*  Start in state2
 			* Input: "move forward" or "turn left" or "turn right" or "move backward"
 			* Return: "then?"
 				* state4
@@ -57,6 +57,6 @@ The initial state is set to `user`.
 						* back to user
 			* Input "stop"
 			* Return: "back to home"
-					* back to user
+				* back to user
 ## Author
 [a3794110](https://github.com/a3794110)
