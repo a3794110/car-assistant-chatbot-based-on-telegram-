@@ -1,5 +1,5 @@
 # Car-Assistant-Chatbot-Based-On-Telegram-
-Car assistant chatbot
+Car Assistant Chatbot
 ### Abilities
 * command the vehicles based on finite state machine
 * simple Natural Language processing
