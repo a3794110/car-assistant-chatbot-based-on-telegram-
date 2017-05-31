@@ -35,28 +35,28 @@ On the other hand, if the input text exist in the transition of finite state mac
 The initial state is set to `user`. 
 * Start in user
 	* Input: "reset the car"
-	  Return: "reset complete"
+	  ; Return: "reset complete"
 	
 	* Input: "functional analysis"
-	  Return: "Which parts?"
+	  ; Return: "Which parts?"
 		*  Start in state3
 			* Input: "all of it"
-			  Return: "car is functional"
+			  ; Return: "car is functional"
 			
 	* Input: "motion control"
-	  Return: "what to do next?"
+	  ; Return: "what to do next?"
 		*  Start in state2
 			* Input: "move forward" or "turn left" or "turn right" or "move backward"
-			  Return: "then?"
+			  ; Return: "then?"
 				*  Start in state4
 					* Input: "again"
-					  Return: "what to do next?"
-						* back to state2
+					  ; Return: "what to do next?"
+						* Back to state2
 					* Input: "stop"
-					  Return: "back to home"
-						* back to user
+					  ; Return: "back to home"
+						* Back to user
 			* Input "stop"
-			  Return: "back to home"
-				* back to user
+			  ; Return: "back to home"
+				* Back to user
 ## Author
 [a3794110](https://github.com/a3794110)
