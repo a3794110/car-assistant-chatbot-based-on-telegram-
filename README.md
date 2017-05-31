@@ -32,16 +32,18 @@ python app.py
 This chatbot has the ability of natural language processing . Therefore ,  the input text does not in the transition of finite state machine , it will respond you with 'perfunctory' words by package 'nltk'.
 
 On the other hand, if the input text exists in the transition of finite state machine , it will act as follows.
+
 The initial state is set to `user`. 
 * Start in user
 	* Input: "reset the car"
 	  ; Return: "reset complete"
-	
+		* Back to user
 	* Input: "functional analysis"
 	  ; Return: "Which parts?"
 		*  Start in state3
 			* Input: "all of it"
 			  ; Return: "car is functional"
+			  	* Back to user
 			
 	* Input: "motion control"
 	  ; Return: "what to do next?"
