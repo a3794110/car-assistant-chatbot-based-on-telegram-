@@ -39,31 +39,31 @@ The initial state is set to `user`.
 	  ; Return: "Which parts?"
 		*  Start in state3
 			* Input: "all of it"
-			  ; Return: "car is functional"
+			  ; Return: "Car is functional"
 			  	* Back to user
 				
 	* Input: "reset the car"
-	  ; Return: "reset is complete..."
+	  ; Return: "Reset is complete..."
 		* Back to user
 	
 	* Input: "motion control"
-	  ; Return: "what to do next?"
+	  ; Return: "What to do next?"
 		*  Start in state2
 		
 			* Input: "move forward" or "turn left" or "turn right" or "move backward"
-			  ; Return: "then?"
+			  ; Return: "Then?"
 				*  Start in state4
 				
 					* Input: "again"
-					  ; Return: "what to do next?"
+					  ; Return: "What to do next?"
 						* Back to state2
 						
 					* Input: "stop"
-					  ; Return: "back to home"
+					  ; Return: "Back to home"
 						* Back to user
 						
 			* Input "stop"
-			  ; Return: "back to home"
+			  ; Return: "Back to home"
 				* Back to user
 ## Author
 [a3794110](https://github.com/a3794110)
