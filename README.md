@@ -38,6 +38,7 @@ The initial state is set to `user`.
 	* Input: "functional analysis"
 	  ; Return: "Which parts?"
 		*  Start in state3
+		
 			* Input: "all of it"
 			  ; Return: "Car is functional"
 			  	* Back to user
@@ -48,7 +49,7 @@ The initial state is set to `user`.
 	
 	* Input: "motion control"
 	  ; Return: "What to do next?"
-		*  Start in state2
+		* Start in state2
 		
 			* Input: "move forward" or "turn left" or "turn right" or "move backward"
 			  ; Return: "Then?"
