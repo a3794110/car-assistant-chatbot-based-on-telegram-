@@ -35,16 +35,17 @@ On the other hand, if the input text exists in the transition of finite state ma
 
 The initial state is set to `user`. 
 * Start in user
-	* Input: "reset the car"
-	  ; Return: "reset complete"
-		* Back to user
 	* Input: "functional analysis"
 	  ; Return: "Which parts?"
 		*  Start in state3
 			* Input: "all of it"
 			  ; Return: "car is functional"
 			  	* Back to user
-			
+				
+	* Input: "reset the car"
+	  ; Return: "reset is complete..."
+		* Back to user
+	
 	* Input: "motion control"
 	  ; Return: "what to do next?"
 		*  Start in state2
