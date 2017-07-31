@@ -8,7 +8,7 @@ from fsm import TocMachine
 
 
 API_TOKEN = '374976246:AAFRcnKaSnW2cBI6q7UUe1yeZyj3gCjdAwE'
-WEBHOOK_URL = 'https://252d5bae.ngrok.io/hook'
+WEBHOOK_URL = 'https://1b137c23.ngrok.io/hook'
 
 app = Flask(__name__)
 bot = telegram.Bot(token=API_TOKEN)
@@ -112,7 +112,7 @@ machine = TocMachine(
     auto_transitions=False,
     show_conditions=True,
 )
-
+x='1'
 
 def _set_webhook():
     status = bot.set_webhook(WEBHOOK_URL)
@@ -126,11 +126,13 @@ def _set_webhook():
 @app.route('/hook', methods=['POST'])
 def webhook_handler():
     update = telegram.Update.de_json(request.get_json(force=True), bot)
+    global x
     if machine.advance(update):
 	machine.advance(update)
     else :
 	text = update.message.text
     	update.message.reply_text(eliza_chatbot.respond(text))
+    x=update.message.text
     return 'ok'
 
 
@@ -141,6 +143,9 @@ def show_fsm():
     byte_io.seek(0)
     return send_file(byte_io, attachment_filename='fsm.png', mimetype='image/png')
 
+@app.route('/motion',methods=['GET'])
+def motion():
+    return x
 
 if __name__ == "__main__":
     _set_webhook()
